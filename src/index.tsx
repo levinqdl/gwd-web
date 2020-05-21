@@ -6,6 +6,7 @@ import { css } from "linaria"
 import "sanitize.css"
 import "sanitize.css/forms.css"
 import { Input } from "./controls"
+import { Button } from "@mana/ui"
 
 const root = document.createElement("div")
 document.body.appendChild(root)
@@ -66,10 +67,11 @@ const App = () => {
               setPassword(value)
             }}
           />
+          <Button>Login</Button>
         </div>
       </div>
     </div>
   )
 }
 
-ReactDOM.createRoot(root).render(<App />)
+ReactDOM.unstable_createRoot(root).render(<App />)

@@ -1,17 +1,21 @@
 /* eslint-env node */
 const HtmlPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const path = require("path")
 
 module.exports = {
   entry: "./src/index.tsx",
   mode: process.env.NODE_ENV,
   resolve: {
-    extensions: [".js", ".ts", ".tsx"]
+    extensions: [".js", ".ts", ".tsx"],
+    alias: {
+      react: path.resolve(__dirname, "node_modules/react")
+    }
   },
   module: {
     rules: [
       {
-        test: /\.tsx$/,
+        test: /\.(tsx|js)$/,
         use: [
           {
             loader: "babel-loader"
