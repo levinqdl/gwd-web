@@ -1,5 +1,9 @@
 dependencies:
+  "@babel/runtime": 7.11.2
+  "@mana-ui/form": "link:../form"
+  "@mana-ui/material": "link:../md"
   "@mana/ui": "link:../ui"
+  core-js: 3.6.5
   framer-motion: 1.11.0_5b8ffd3a6735d10b6454f11c647f09e7
   linaria: 1.3.3
   react: 0.0.0-experimental-33c3af284
@@ -7,6 +11,7 @@ dependencies:
   sanitize.css: 11.0.0
 devDependencies:
   "@babel/core": 7.9.6
+  "@babel/plugin-transform-runtime": 7.11.5_@babel+core@7.9.6
   "@babel/preset-env": 7.9.6_@babel+core@7.9.6
   "@babel/preset-react": 7.9.4_@babel+core@7.9.6
   "@babel/preset-typescript": 7.9.0_@babel+core@7.9.6
@@ -179,6 +184,12 @@ packages:
       "@babel/types": 7.9.6
     resolution:
       integrity: sha512-fO4Egq88utkQFjbPrSHGmGLFqmrshs11d46WI+WZDESt7Wu7wN2G2Iu+NMMZJFDOVRHAMIkB5SNh30NtwCA7RA==
+  /@babel/helper-module-imports/7.10.4:
+    dependencies:
+      "@babel/types": 7.11.5
+    dev: true
+    resolution:
+      integrity: sha512-nEQJHqYavI217oD9+s5MUBzk6x1IlvoS9WTPfgG43CbMEeStE0v+r+TucWdx8KFGowPGvyOkDT9+7DHedIDnVw==
   /@babel/helper-module-imports/7.8.3:
     dependencies:
       "@babel/types": 7.9.6
@@ -200,6 +211,10 @@ packages:
       "@babel/types": 7.9.6
     resolution:
       integrity: sha512-Kag20n86cbO2AvHca6EJsvqAd82gc6VMGule4HwebwMlwkpXuVqrNRj6CkCV2sKxgi9MyAUnZVnZ6lJ1/vKhHQ==
+  /@babel/helper-plugin-utils/7.10.4:
+    dev: true
+    resolution:
+      integrity: sha512-O4KCvQA6lLiMU9l2eawBPMf1xPP8xPfB3iEQw150hOVTqj/rfXz0ThTb4HEzqQfs2Bmo5Ay8BzxfzVtBrr9dVg==
   /@babel/helper-plugin-utils/7.8.3:
     resolution:
       integrity: sha512-j+fq49Xds2smCUNYmEHF9kGNkhbet6yVIBp4e6oeQpH1RUs/Ir06xUKzDjDkGcaaokPiTNs2JBWHjaE4csUkZQ==
@@ -238,6 +253,10 @@ packages:
       "@babel/types": 7.9.6
     resolution:
       integrity: sha512-3x3yOeyBhW851hroze7ElzdkeRXQYQbFIb7gLK1WQYsw2GWDay5gAJNw1sWJ0VFP6z5J1whqeXH/WCdCjZv6dA==
+  /@babel/helper-validator-identifier/7.10.4:
+    dev: true
+    resolution:
+      integrity: sha512-3U9y+43hz7ZM+rzG24Qe2mufW5KhvFg/NhnNph+i9mgCtdTCtMJuI1TMkrIUiK7Ix4PYlRF9I5dhqaLYA/ADXw==
   /@babel/helper-validator-identifier/7.9.5:
     resolution:
       integrity: sha512-/8arLKUFq882w4tWGj9JYzRpAlZgiWUJ+dtteNTDqrRBz9Iguck9Rn3ykuBDoUwh2TO4tSAJlrxDUOXWklJe4g==
@@ -781,6 +800,18 @@ packages:
       "@babel/core": ^7.0.0-0
     resolution:
       integrity: sha512-mwMxcycN3omKFDjDQUl+8zyMsBfjRFr0Zn/64I41pmjv4NJuqcYlEtezwYtw9TFd9WR1vN5kiM+O0gMZzO6L0A==
+  /@babel/plugin-transform-runtime/7.11.5_@babel+core@7.9.6:
+    dependencies:
+      "@babel/core": 7.9.6
+      "@babel/helper-module-imports": 7.10.4
+      "@babel/helper-plugin-utils": 7.10.4
+      resolve: 1.17.0
+      semver: 5.7.1
+    dev: true
+    peerDependencies:
+      "@babel/core": ^7.0.0-0
+    resolution:
+      integrity: sha512-9aIoee+EhjySZ6vY5hnLjigHzunBlscx9ANKutkeWTJTx6m5Rbq6Ic01tLvO54lSusR+BxV7u4UDdCmXv5aagg==
   /@babel/plugin-transform-shorthand-properties/7.8.3_@babel+core@7.9.6:
     dependencies:
       "@babel/core": 7.9.6
@@ -974,6 +1005,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-6toWAfaALQjt3KMZQc6fABqZwUDDuWzz+cAfPhqyEnzxvdWOAkjwPNxgF8xlmo7OWLsSjaKjsskpKHRLaMArOA==
+  /@babel/runtime/7.11.2:
+    dependencies:
+      regenerator-runtime: 0.13.7
+    dev: false
+    resolution:
+      integrity: sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
   /@babel/runtime/7.9.6:
     dependencies:
       regenerator-runtime: 0.13.5
@@ -1000,6 +1037,14 @@ packages:
       lodash: 4.17.15
     resolution:
       integrity: sha512-b3rAHSjbxy6VEAvlxM8OV/0X4XrG72zoxme6q1MOoe2vd0bEc+TwayhuC1+Dfgqh1QEG+pj7atQqvUprHIccsg==
+  /@babel/types/7.11.5:
+    dependencies:
+      "@babel/helper-validator-identifier": 7.10.4
+      lodash: 4.17.20
+      to-fast-properties: 2.0.0
+    dev: true
+    resolution:
+      integrity: sha512-bvM7Qz6eKnJVFIn+1LPtjlBFPVN5jNDc1XmN15vWe7Q3DPBufWWsLiIvUu7xW87uTG6QoggpIDnUgLQvPheU+Q==
   /@babel/types/7.9.6:
     dependencies:
       "@babel/helper-validator-identifier": 7.9.5
@@ -4807,6 +4852,10 @@ packages:
   /lodash/4.17.15:
     resolution:
       integrity: sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  /lodash/4.17.20:
+    dev: true
+    resolution:
+      integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
   /log-symbols/3.0.0:
     dependencies:
       chalk: 2.4.2
@@ -6255,6 +6304,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ZS5w8CpKFinUzOwW3c83oPeVXoNsrLsaCoLtJvAClH135j/R77RuymhiSErhm2lKcwSCIpmvIWSbDkIfAqKQlA==
+  /regenerator-runtime/0.13.7:
+    dev: false
+    resolution:
+      integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
   /regenerator-transform/0.14.4:
     dependencies:
       "@babel/runtime": 7.9.6
@@ -7885,11 +7938,15 @@ packages:
       integrity: sha512-AX3Zw5iPruN5ie6xGRIDgqkT+ZhnRlZMLMHAs8tg7nRruy2Nb+i5o9bwghAogtM08q1dpr2LVoS8KSTMYpWXUw==
 specifiers:
   "@babel/core": ^7.8.7
+  "@babel/plugin-transform-runtime": ^7.11.5
   "@babel/preset-env": ^7.8.7
   "@babel/preset-react": ^7.8.3
   "@babel/preset-typescript": ^7.8.3
+  "@babel/runtime": ^7.11.2
   "@commitlint/cli": ^8.3.5
   "@commitlint/config-conventional": ^8.3.4
+  "@mana-ui/form": "workspace:^0.2.3"
+  "@mana-ui/material": "workspace:^0.0.1"
   "@mana/ui": "workspace:^0.1.0"
   "@types/react": ^16.9.23
   "@types/react-dom": ^16.9.5
@@ -7897,6 +7954,7 @@ specifiers:
   "@typescript-eslint/parser": ^2.23.0
   babel-loader: ^8.0.6
   cross-env: ^7.0.2
+  core-js: ^3.6.5
   css-loader: ^3.4.2
   eslint: ^6.8.0
   eslint-plugin-react: ^7.19.0
